@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+:root{
+    
+    --button: hsl(158, 36%, 37%);
+    --button-hover: hsl(158, 46%, 20%);
+    --background-color: hsl(30, 38%, 92%);
+
+    --h1-color: hsl(212, 21%, 14%);
+    --text-color: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    display:block;
+    width: 100%;
+}
+p,h1{
+    overflow-wrap: break-word;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+    background-color: var(--background-color);
+    font-family: Montserrat;
+    color: var(--text-color);
+}
+.container{
+    border-radius: .5rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 630px;
+}
+.right{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--White);
+    gap: 1rem;
+}
+.right .catagory{
+    letter-spacing: .4rem;
+    font-size: .7rem;
+}
+.right h1{
+    line-height: normal;
+    font-family: Fraunces;
+    font-weight: 700;
+    color: var(--h1-color);
+    font-size: 2rem;
+}
+.right .discription{
+    line-height: 1.7rem;
+    font-size: .85rem;
+}
+.right .price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.right .price .now{
+    color: var(--button);
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.right .price .before{
+    text-decoration: line-through;
+}
+button{
+    background-color: var(--button);
+    color: white;
+    border: none;
+    padding: .7rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+button svg{
+   margin-right: .5rem;
+}
+button:hover, button:focus-visible{
+    background-color: var(--button-hover);
+}
+@media (min-width: 630px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.attribution { 
+    margin-top: 1rem;
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
